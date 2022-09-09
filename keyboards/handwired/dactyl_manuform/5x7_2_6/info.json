@@ -7,7 +7,7 @@
     "features": {
         "bootmagic": false,
         "command": true,
-        "console": false,
+        "console": true,
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
