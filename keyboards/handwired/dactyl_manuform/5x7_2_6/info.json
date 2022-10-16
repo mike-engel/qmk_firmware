@@ -1,19 +1,21 @@
 {
     "manufacturer": "Mike Engel",
+    "product": "Dactyl Manuform Mk.I",
     "keyboard_name": "handwired/dactyl_manuform/5x7_2_6",
     "maintainer": "mike-engel",
     "bootloader": "atmel-dfu",
     "diode_direction": "COL2ROW",
     "features": {
-        "bootmagic": false,
+        "bootmagic": true,
         "command": true,
-        "console": true,
+        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
         "backlight": false,
         "rgblight": false,
-        "audio": false
+        "audio": false,
+        "via": true
     },
     "split": {
         "enabled": true
@@ -30,8 +32,8 @@
     "url": "",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0xFEED"
+        "pid": "0x0001",
+        "vid": "0x4D45"
     },
     "layouts": {
         "LAYOUT_5x7_2_6": {
