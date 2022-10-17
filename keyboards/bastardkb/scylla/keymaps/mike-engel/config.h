@@ -18,31 +18,33 @@
 #pragma once
 
 /* Key matrix configuration. */
-#undef MATRIX_ROW_PINS
-#undef MATRIX_COL_PINS
-#define MATRIX_ROW_PINS \
-    { F6, F7, B1, B3, B2 }
-#define MATRIX_COL_PINS \
-    { D4, C6, D7, E6, B4, B5 }
+// #undef MATRIX_ROW_PINS
+// #undef MATRIX_COL_PINS
+// #define MATRIX_ROW_PINS \
+//     { F6, F7, B1, B3, B2 }
+// #define MATRIX_COL_PINS \
+//     { D4, C6, D7, E6, B4, B5 }
+
+// #undef RGB_DI_PIN
 
 /* Handedness. */
 #define MASTER_LEFT
 
 #ifdef VIA_ENABLE
 /* VIA configuration. */
-#define DYNAMIC_KEYMAP_LAYER_COUNT 4
+#    define DYNAMIC_KEYMAP_LAYER_COUNT 4
 
-#ifdef VIAL_ENABLE
+#    ifdef VIAL_ENABLE
 /** Vial configuration. */
-#define VIAL_KEYBOARD_UID \
-  { 0x5B, 0x76, 0x3F, 0xFF, 0xA8, 0x70, 0x33, 0xC8 }
-#define VIAL_UNLOCK_COMBO_ROWS \
-  { 0, 5 }
-#define VIAL_UNLOCK_COMBO_COLS \
-  { 0, 0 }
-#endif  // VIAL_ENABLE
+#        define VIAL_KEYBOARD_UID \
+            { 0x5B, 0x76, 0x3F, 0xFF, 0xA8, 0x70, 0x33, 0xC8 }
+#        define VIAL_UNLOCK_COMBO_ROWS \
+            { 0, 5 }
+#        define VIAL_UNLOCK_COMBO_COLS \
+            { 0, 0 }
+#    endif // VIAL_ENABLE
 
 /* Disable action features. */
-#define NO_ACTION_MACRO     // Disable old-style macro handling.
-#define NO_ACTION_FUNCTION  // Disable old-style function handling.
-#endif                      // VIA_ENABLE
+#    define NO_ACTION_MACRO    // Disable old-style macro handling.
+#    define NO_ACTION_FUNCTION // Disable old-style function handling.
+#endif                         // VIA_ENABLE

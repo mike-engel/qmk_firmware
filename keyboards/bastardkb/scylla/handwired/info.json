@@ -1,6 +1,37 @@
 {
+    "manufacturer": "Mike Engel",
+    "product": "Scylla Handwired Mk. I",
+    "keyboard_name": "bastardkb/scylla/handwired",
+    "maintainer": "Mike Engel",
+    "bootloader": "atmel-dfu",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": true,
+        "console": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "backlight": false,
+        "rgblight": false,
+        "audio": false,
+        "via": true
+    },
+    "split": {
+        "enabled": true
+    },
+    "matrix": {
+        "cols": 6,
+        "rows": 10
+    },
+    "matrix_pins": {
+        "cols": ["D4", "C6", "D7", "E6", "B4", "B5"],
+        "rows": ["F6", "F7", "B1", "B3", "B2"]
+    },
+    "processor": "atmega32u4",
     "url": "https://bastardkb.com/scylla",
     "usb": {
+        "vid": "0x4D45",
         "pid": "0x1829"
     },
     "layouts": {

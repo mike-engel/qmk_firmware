@@ -1,11 +1,10 @@
 {
     "name": "Scylla",
-    "vendorId": "0xA8F8",
+    "vendorId": "0x4D45",
     "productId": "0x1829",
-    "lighting": "vialrgb",
     "matrix": {
-        "rows": 10,
-        "cols": 6
+        "cols": 6,
+        "rows": 10
     },
     "layouts": {
         "keymap": [
