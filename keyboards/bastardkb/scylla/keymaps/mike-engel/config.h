@@ -18,14 +18,14 @@
 #pragma once
 
 /* Key matrix configuration. */
-// #undef MATRIX_ROW_PINS
-// #undef MATRIX_COL_PINS
-// #define MATRIX_ROW_PINS \
-//     { F6, F7, B1, B3, B2 }
-// #define MATRIX_COL_PINS \
-//     { D4, C6, D7, E6, B4, B5 }
+/* #undef MATRIX_ROW_PINS
+#undef MATRIX_COL_PINS
+#define MATRIX_ROW_PINS \
+    { F6, F7, B1, B3, B2 }
+#define MATRIX_COL_PINS \
+    { D4, C6, D7, E6, B4, B5 } */
 
-// #undef RGB_DI_PIN
+/* #undef RGB_DI_PIN */
 
 /* Handedness. */
 #define MASTER_LEFT
@@ -42,6 +42,7 @@
             { 0, 5 }
 #        define VIAL_UNLOCK_COMBO_COLS \
             { 0, 0 }
+#        define VIAL_COMBO_ENTRIES 4
 #    endif // VIAL_ENABLE
 
 /* Disable action features. */

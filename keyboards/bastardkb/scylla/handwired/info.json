@@ -7,15 +7,17 @@
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
-        "command": true,
-        "console": true,
+        "command": false,
+        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
+        "tapdance": true,
         "backlight": false,
         "rgblight": false,
         "audio": false,
-        "via": true
+        "via": true,
+        "vial": true
     },
     "split": {
         "enabled": true
@@ -31,6 +33,7 @@
     "processor": "atmega32u4",
     "url": "https://bastardkb.com/scylla",
     "usb": {
+        "device_version": "1.0.0",
         "vid": "0x4D45",
         "pid": "0x1829"
     },
