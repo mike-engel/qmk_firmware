@@ -10,7 +10,7 @@
         "command": false,
         "console": false,
         "extrakey": true,
-        "mousekey": true,
+        "mousekey": false,
         "nkro": true,
         "tapdance": true,
         "backlight": false,
