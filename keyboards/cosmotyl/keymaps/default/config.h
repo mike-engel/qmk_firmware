@@ -2,6 +2,7 @@
 
 #define MASTER_LEFT
 #define TAPPING_TERM 175
+#define QUICK_TAP_TERM_PER_KEY
 #define QUICK_TAP_TERM 80
 #define PERMISSIVE_HOLD
 #define USE_ACCORDION
