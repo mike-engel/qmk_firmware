@@ -89,8 +89,8 @@ enum layers {
 const uint16_t PROGMEM grv_combo[] = {KC_Q, KC_SEMICOLON, COMBO_END};
 const uint16_t PROGMEM esc_combo[] = {KC_A, KC_O, COMBO_END};
 const uint16_t PROGMEM hyp_combo[] = {KC_P, KC_L, COMBO_END};
-const uint16_t PROGMEM und_combo[] = {KC_D, KC_H, COMBO_END};
-const uint16_t PROGMEM cap_combo[] = {KC_Z, KC_SLASH, COMBO_END};
+const uint16_t PROGMEM und_combo[] = {LSFT_T(KC_D), RSFT_T(KC_H), COMBO_END};
+const uint16_t PROGMEM cap_combo[] = {LCTL_T(KC_Z), RCTL_T(KC_SLASH), COMBO_END};
 // clang-format off
 combo_t key_combos[] = {
     COMBO(grv_combo, KC_GRAVE),
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Left hand
           KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,
           KC_A,           KC_R,           KC_S,           KC_T,           KC_G,
-  LCTL_T(KC_Z),   LALT_T(KC_X),   LGUI_T(KC_C),   LSFT_T(KC_B),    ALL_T(KC_V),
+  LCTL_T(KC_Z),   LALT_T(KC_X),   LGUI_T(KC_C),   LSFT_T(KC_D),    ALL_T(KC_V),
                                         KC_TAB,          MO(3),          MO(2),
 // Right hand
             KC_J,           KC_L,             KC_U,           KC_Y,          KC_SCLN,
