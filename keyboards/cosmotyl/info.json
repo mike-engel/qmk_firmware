@@ -16,8 +16,7 @@
         "tapdance": true,
         "backlight": false,
         "rgblight": false,
-        "audio": false,
-        "via": true
+        "audio": false
     },
     "build": {
         "firmware_format": "uf2",
