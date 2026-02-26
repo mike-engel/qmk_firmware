@@ -2,9 +2,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
-#ifdef USE_ACCORDION
-#    include "features/achordion.h"
-#endif
 
 uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
     // If you quickly hold a tap-hold key after tapping it, the tap action is
@@ -30,12 +27,6 @@ void keyboard_post_init_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-#ifdef USE_ACHORDION
-    if (!process_achordion(keycode, record)) {
-        return false;
-    }
-#endif
-
     // If console is enabled, it will print the matrix position and status of each key pressed
 #ifdef CONSOLE_ENABLE
     uprintf("DEBUG: kc: 0x%04X, col: %u, row: %u, pressed: %d, time: %u, interrupt: %d, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
@@ -43,31 +34,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 
     return true;
 }
-
-#ifdef USE_ACHORDION
-void matrix_scan_user(void) {
-    achordion_task();
-}
-
-bool achordion_chord(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, uint16_t other_keycode, keyrecord_t* other_record) {
-    // Also allow same-hand holds when the other key is in the rows below the
-    // alphas. I need the `% (MATRIX_ROWS / 2)` because my keyboard is split.
-    if (other_record->event.key.row % (MATRIX_ROWS / 2) >= 3) {
-        return true;
-    }
-
-    // Otherwise, follow the opposite hands rule.
-    return achordion_opposite_hands(tap_hold_record, other_record);
-}
-
-uint16_t achordion_streak_timeout(uint16_t tap_hold_keycode) {
-    if (IS_QK_LAYER_TAP(tap_hold_keycode)) {
-        return 0; // Disable streak detection on layer-tap keys.
-    }
-
-    return 100; // A longer timeout otherwise.
-}
-#endif
 
 #ifdef BILATERAL_COMBINATIONS
 // See https://github.com/manna-harbour/qmk_firmware/pull/56
@@ -100,6 +66,22 @@ combo_t key_combos[] = {
     COMBO(cap_combo, QK_CAPS_WORD_TOGGLE),
 };
 // clang-format on
+
+// clang format off
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT_3x5_3(
+        // Left hand
+        'L', 'L', 'L', 'L', 'L',
+        'L', 'L', 'L', 'L', 'L',
+        'L', 'L', 'L', 'L', 'L',
+                  '*', '*', '*',
+        // Right hand
+        'R', 'R', 'R', 'R', 'R',
+        'R', 'R', 'R', 'R', 'R',
+        'R', 'R', 'R', 'R', 'R',
+        '*', '*', '*'
+    );
+// clang format on
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

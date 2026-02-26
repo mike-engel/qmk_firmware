@@ -5,9 +5,7 @@
 #define QUICK_TAP_TERM_PER_KEY
 #define QUICK_TAP_TERM 80
 #define PERMISSIVE_HOLD
-#define USE_ACCORDION
-#define ACHORDION_STREAK
-// #define BILATERAL_COMBINATIONS
+#define CHORDAL_HOLD
 
 /** VIA configuration */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
