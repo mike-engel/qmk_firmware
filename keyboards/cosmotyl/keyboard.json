@@ -2,10 +2,19 @@
     "manufacturer": "Mike Engel",
     "keyboard_name": "cosmotyl",
     "maintainer": "mike-engel",
-    "bootloader": "rp2040",
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0001",
+        "vid": "0xDEAD"
+    },
     "processor": "RP2040",
+    "bootloader": "rp2040",
     "board": "GENERIC_RP_RP2040",
-    "diode_direction": "COL2ROW",
+    "build": {
+        "firmware_format": "uf2",
+        "lto": true
+    },
     "features": {
         "bootmagic": true,
         "command": true,
@@ -16,15 +25,10 @@
         "tapdance": true,
         "backlight": false,
         "rgblight": false,
-        "audio": false
+        "audio": false,
+        "caps_word": true
     },
-    "build": {
-        "firmware_format": "uf2",
-        "lto": true
-    },
-    "split": {
-        "enabled": true
-    },
+    "diode_direction": "COL2ROW",
     "matrix": {
         "cols": 5,
         "rows": 8
@@ -33,12 +37,13 @@
         "cols": ["GP4", "GP5", "GP6", "GP7", "GP8"],
         "rows": ["GP27", "GP26", "GP22", "GP20"]
     },
-    "url": "",
-    "usb": {
-        "device_version": "1.0.0",
-        "pid": "0x0001",
-        "vid": "0xDEAD"
+    "split": {
+        "enabled": true,
+        "serial": {
+            "driver": "vendor"
+        }
     },
+    "deferred_exec": true,
     "layouts": {
         "LAYOUT_3x5_3": {
             "layout": [

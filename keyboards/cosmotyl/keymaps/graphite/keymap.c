@@ -35,15 +35,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     return true;
 }
 
-#ifdef BILATERAL_COMBINATIONS
-// See https://github.com/manna-harbour/qmk_firmware/pull/56
-#    define BILATERAL_COMBINATIONS_LIMIT_CHORD_TO_N_KEYS 4 /* GUI, Alt, Ctrl, Shift */
-#    define BILATERAL_COMBINATIONS_ALLOW_SAMESIDED_AFTER 500
-#    define BILATERAL_COMBINATIONS_ALLOW_CROSSOVER_AFTER 80
-#    define BILATERAL_COMBINATIONS_TYPING_STREAK_TIMEOUT 160
-#    define BILATERAL_COMBINATIONS_TYPING_STREAK_MODMASK (~MOD_MASK_SHIFT)
-#endif
-
 enum layers {
     BASE,
     PROGRAMMING,
