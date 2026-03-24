@@ -82,17 +82,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_B,           KC_L,           KC_D,           KC_W,           KC_Z,
         KC_N,           KC_R,           KC_T,           KC_S,           KC_G,
 LCTL_T(KC_Q),   LALT_T(KC_X),   LGUI_T(KC_M),   LSFT_T(KC_C),    ALL_T(KC_V),
-                                      KC_TAB,          MO(3),          MO(2),
+                                      KC_TAB,          MO(2),          MO(1),
 // Right hand
        KC_SCLN,           KC_F,             KC_O,           KC_U,             KC_J,
           KC_Y,           KC_H,             KC_A,           KC_E,             KC_I,
    ALL_T(KC_K),   RSFT_T(KC_P), RGUI_T(KC_COMMA), RALT_T(KC_DOT), RCTL_T(KC_SLASH),
-LT(4, KC_BSPC),       KC_SPACE,         KC_ENTER
+LT(3, KC_BSPC),       KC_SPACE,         KC_ENTER
 ),
     [PROGRAMMING] = LAYOUT_3x5_3(
 // Left hand
       KC_GRAVE,        KC_TRNS,        KC_TRNS,        KC_TRNS, LALT(KC_MINUS),
-         TG(1),        KC_HOME,        KC_PGUP,        KC_PGDN,         KC_END,
+       KC_TRNS,        KC_HOME,        KC_PGUP,        KC_PGDN,         KC_END,
        QK_BOOT,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
                                        KC_TRNS,        KC_TRNS,        KC_TRNS,
 // Right hand
