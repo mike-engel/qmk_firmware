@@ -11,7 +11,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
     switch (keycode) {
         case KC_ENTER:
         case KC_SPACE:
-        case LT(4, KC_BSPC):
+        case LT(3, KC_BSPC):
             return QUICK_TAP_TERM; // Enable key repeating.
         default:
             return 0; // Otherwise, force hold and disable key repeating.
@@ -119,18 +119,6 @@ LT(3, KC_BSPC),       KC_SPACE,         KC_ENTER
    LSFT(KC_QUOTE),     LSFT(KC_6),     LSFT(KC_5),     LSFT(KC_4), LSFT(KC_EQUAL),
    LSFT(KC_GRAVE),     LSFT(KC_3),     LSFT(KC_2),     LSFT(KC_1),  LSFT(KC_BSLS),
                                         KC_TAB,        KC_TRNS,        KC_TRNS,
-// Right hand
-         KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-         KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-         KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-         KC_TRNS,        KC_TRNS,        KC_TRNS
-    ),
-    [5] = LAYOUT_3x5_3(
-// Left hand
-       KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-       KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-       KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-                                       KC_TRNS,        KC_TRNS,        KC_TRNS,
 // Right hand
          KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
          KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
