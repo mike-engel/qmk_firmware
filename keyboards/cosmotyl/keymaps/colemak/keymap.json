@@ -8,12 +8,12 @@
         }
     },
     "tapping": {
-        "term": 175,
+        "chordal_hold": true,
+        "term": 250,
         "quick_tap_term": 80,
         "quick_tap_term_per_key": true,
         "permissive_hold": true
     },
-    "chordal_hold": true,
     "features": {
         "via": false,
         "combo": true

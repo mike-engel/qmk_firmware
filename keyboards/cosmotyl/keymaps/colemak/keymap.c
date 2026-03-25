@@ -57,6 +57,22 @@ combo_t key_combos[] = {
 };
 // clang-format on
 
+// clang format off
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT_3x5_3(
+        // Left hand
+        'L', 'L', 'L', 'L', 'L',
+        'L', 'L', 'L', 'L', 'L',
+        'L', 'L', 'L', 'L', 'L',
+                  '*', '*', '*',
+        // Right hand
+        'R', 'R', 'R', 'R', 'R',
+        'R', 'R', 'R', 'R', 'R',
+        'R', 'R', 'R', 'R', 'R',
+        '*', '*', '*'
+    );
+// clang format on
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Colemak
