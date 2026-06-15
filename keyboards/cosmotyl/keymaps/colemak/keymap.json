@@ -9,6 +9,7 @@
     },
     "tapping": {
         "chordal_hold": true,
+        "hold_on_other_key_press": true,
         "term": 250,
         "quick_tap_term": 80,
         "quick_tap_term_per_key": true,
